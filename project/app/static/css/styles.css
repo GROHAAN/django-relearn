@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    color: white;
+
+}
+
+.heading{
+    text-align: center;
+    font-size: 50px;
+    color: yellow;
+}
+
+a{
+    display: block;
+    text-align: center;
+    color: blueviolet;
+    font-size: 20px;
+}
+
+.para{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.imageContainer{
+    width: 100%;
+    height: 400px;
+    border: 2px solid yellow;
+    margin-top: 20px;
+}
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
