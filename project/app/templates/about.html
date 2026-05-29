@@ -9,5 +9,27 @@
 {% block content %}
     <h1 class="heading">About Us</h1>
     <p class="para">This is the content of the about page.</p>
+
+
+    {{students.0}}
+
+
+
+    {% for std  in students %}
+        <p class="para">{{ std | upper}}</p>
+        <p class="para">{{ std | lower}}</p>
+        <p class="para">{{ std | title}}</p>
+        <p class="para">{{ std | length}}</p>
+        <p class="para">{{ std | default:"not found"}}</p>
+        <p class="para">{{ std | truncatechars:4}}</p>
+        {% empty %}
+        <h1 class="heading">No students found.</h1>
+    {% endfor %}
+
+    {% for std in students %}
+        <h1 class="heading">{{forloop.counter}}. {{std}}</h1>
+    
+    {% endfor %}
+
 {% endblock content %}
     

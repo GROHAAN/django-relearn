@@ -7,9 +7,6 @@
 {% endblock title %}
 
 
-    
-
-
 
 {% block content %}
     <h1 class="heading">Welcome to the Home Page</h1>
@@ -17,6 +14,18 @@
 
 
     <a href="{% url 'about' %}">About Us</a>
+
+
+    
+    {% if age <= 18 %}
+        <p class="para">You are a minor.</p>
+    {% elif age > 18 and age < 60 %}
+        <p class="para">You are an adult.</p>
+    {% else %}
+        <p class="para">You are a senior citizen.</p>
+        
+    {% endif %}
+        
 
 
     <div class="imageContainer"><img src="{% static 'images/image.jpeg' %}" alt="Logo"></div>
